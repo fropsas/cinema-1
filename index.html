@@ -5,26 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кинотеатр в Иннополисе</title>
 </head>
+<style>
+    th,td{
+        border:2px solid black;
+        padding: 3px 18px;
+    }
+</style>
 <body>
     <!--Первый экран-->
     <div>           
         <header style="overflow: hidden;">
             <div style="float:left; margin-right: 20px; background-color: black;">
-                <a href="http://university.innopolis.ru" target="_blank" title="Кинотеатр в Иннополисе"><img src="img/logo.png" alt="Логотип университета Иннополис"/></a>
+                <a href="http://university.innopolis.ru" target="_blank" title="Кинотеатр в Иннополисе">
+                    <img src="img/logo.png" alt="Логотип университета Иннополис"/>
+                </a>
             </div>
             <nav style="float:left; margin-right: 20px;">
-                <a href="#" title="Кинотеатр в Иннополисе">ЗАКАЗАТЬ БИЛЕТ</a>  
-                <a href="#" title="Кинотеатр в Иннополисе">ПРЕИМУЩЕСТВА</a>
-                <a href="#" title="Кинотеатр в Иннополисе">ФИЛЬМЫ</a> 
-                <a href="#" title="Кинотеатр в Иннополисе">КОНТАКТЫ</a> 
+                <ul>
+                    <li><a href="#orderticket" title="Кинотеатр в Иннополисе">ЗАКАЗАТЬ БИЛЕТ</a></li>  
+                    <li><a href="#benefits" title="Кинотеатр в Иннополисе">ПРЕИМУЩЕСТВА</a></li>
+                    <li><a href="#movies" title="Кинотеатр в Иннополисе">ФИЛЬМЫ</a></li> 
+                    <li><a href="#contacts" title="Кинотеатр в Иннополисе">КОНТАКТЫ</a></li> 
+                </ul>
             </nav>
             <div>
                 Ваш город: <u>Иннополис</u>
             </div>
         </header>
         <div>
-            <h1>Закажите билет в <span>кино</span></h1>
-            <p>Всем покупателям подарок!</p>
+            <h1>Закажите билет в кино</h1>
+            <h2>Всем покупателям подарок!</h2>
         </div>
     </div>    
     <!--Конец первого экрана-->
@@ -32,7 +42,7 @@
     <!--Второй экран-->
     <section>
         <div>
-            <b>Добро пожаловать!</b>
+            <h3>Добро пожаловать!</h3>
             <p>
                 Cumque dolorem eum harum laudantium libero molestias saepe soluta? 
                 Facere minima optio perferendis quibusdam quis reprehenderit, saepe!
@@ -44,11 +54,12 @@
                  Debitis enim optio saepe voluptatibus.
             </p>            
         </div>
-        <b>Почему мы?</b>
+        <a name="benefits"></a>
+        <h3>Почему мы?</h3>
         <div>
             <article>
                 <img src="img/b2_icon_1.jpg"  alt="Большие экраны"/>
-                <b>Большие экраны</b>
+                <h4>Большие экраны</h4>
                 <p>
                     Meet the Community you’ve always talked with, in
                     real life! This meetup will be all about authors
@@ -58,7 +69,7 @@
             </article>
             <article>
                 <img src="img/b2_icon_2.jpg"  alt="Объемный звук"/>
-                <b>Объемный звук</b>
+                <h4>Объемный звук</h4>
                 <p>
                     In this meetup you will get to know the marketplaces better,
                     because that’s why were all here for right?
@@ -68,7 +79,7 @@
             </article>
             <article>
                 <img src="img/b2_icon_3.jpg"  alt="Удобные кресла"/>
-                <b>Удобные кресла</b>
+                <h4>Удобные кресла</h4>
                 <p>
                     Gather round fellow authors!
                     Hear the stories of success from your favorite authors
@@ -79,24 +90,53 @@
         </div>       
     </section> 
     <!--Конец второго экрана--> 
-    <div>
-        <b>Выберите фильм</b>
-        <p>
-            Time 	Stuff that will happen<br/>
-            10am - 12pm	Introduction and presentations about Envato <img src="img/More icon.png" alt="Introduction and presentations about Envato"><br/>
-            12pm - 02pm	Sessions by honorable guests and Speakers <img src="img/More icon.png" alt="Introduction and presentations about Envato"><br/>
-            02pm - 03pm	Break and Mingle time with the authors <img src="img/More icon.png" alt="Introduction and presentations about Envato"><br/>
-            03pm - 05pm	Portfolio Review, Rewards and Ending Presentation <img src="img/More icon.png" alt="Introduction and presentations about Envato">
-        </p>
+    <section>
+        <h3>Выберите фильм</h3>
+        <table>
+            <caption>Фильмы которые показывают у нас в кинотеатре</caption>
+            <thead>
+                <tr>
+                    <th>Check</tg>
+                    <th>Начало сеанса</th>
+                    <th>Название фильма</th>
+                    <th>Жанр</th>
+                    <th>Заказать билет</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Check</td>
+                    <td>10:00</td>
+                    <td>Человек-паук</td>
+                    <td>фантастика</td>
+                    <td>Заказать билет</td>
+                </tr>
+                <tr>
+                    <td>Check</td>
+                    <td>12:00</td>
+                    <td>Собачья жизнь 2</td>
+                    <td>фэнтези</td>
+                    <td>Заказать билет</td>
+                </tr>
+                <tr>
+                    <td>Check</td>
+                    <td>14:00</td>
+                    <td>Люди в черном</td>
+                    <td>фэнтези</td>
+                    <td>Заказать билет</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>             
         <p>
             Please keep in mind that the timings may differ according to the flow of the event.
             The even is actually day long and we do plan to finish it within our set time but it doesn’t have to be,
             if we all agree to hangour for some time more, what harm could it do? :)
         </p>
-    </div>
+    </section>
     <div>
         <img src="img/b4_img.jpg"  alt="Подарок каждому!"/>
-        <b>Подарок каждому!</b>
+        <h3>Подарок каждому!</h3>
         <p>
             Are you an Elite author in the Envato Marketplaces?
             If so we are proud of you! We want to give our thanks in achieving
@@ -123,7 +163,8 @@
         </div>
     </div>
     <section>
-        <b>Фильмы</b>
+        <a name="movies"></a>
+        <h3>Фильмы</h3>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Ab adipisci alias, animi, commodi eius ipsum, laudantium
@@ -199,6 +240,7 @@
                     </div>
                 </div>
             </article>
+
             <article>
                 <img src="img/movie/mov1.jpg"  alt="Человек-паук"/>
                 <div>
@@ -209,8 +251,7 @@
                         More about selling in the Envato Marketplaces
                     </div>
                 </div>
-            </article>
-        
+            </article>        
             <article>
                 <img src="img/movie/mov2.jpg"  alt="Собачья жизнь 2"/>
                 <div>
@@ -222,6 +263,7 @@
                     </div>
                 </div>
             </article>
+
             <article>
                 <img src="img/movie/mov3.jpg"  alt="Люди в черном: Интернэшнл"/>
                 <div>
@@ -232,26 +274,128 @@
                         More about selling in the Envato Marketplaces
                     </div>
                 </div>
-            </article>
-        
+            </article>        
        </div>
-
     </section>  
     <section>
+        <a name="contacts"></a>
         <img src="img/map.png"  alt="Кинотеатр на карте"/>
     </section>
     <footer style="height:220px">
         <div>
             <a href="#" target="_blank"><img src="img/socials/facebook .png" alt="Кинотеатр в facebook"></a>
-                <a href="#" target="_blank"><img src="img/socials/twitter.png"  alt="Кинотеатр в twitter"></a>
-                <a href="#" target="_blank"><img src="img/socials/linkedin.png" alt="Кинотеатр в linkedin"></a>
-                <a href="#" target="_blank"><img src="img/socials/google plus .png" alt="Кинотеатр в G+"></a>
-                <a href="#" target="_blank"><img src="img/socials/tumblr.png" alt="Кинотеатр в tumblr"></a>
+            <a href="#" target="_blank"><img src="img/socials/twitter.png"  alt="Кинотеатр в twitter"></a>
+            <a href="#" target="_blank"><img src="img/socials/linkedin.png" alt="Кинотеатр в linkedin"></a>
+            <a href="#" target="_blank"><img src="img/socials/google plus .png" alt="Кинотеатр в G+"></a>
+            <a href="#" target="_blank"><img src="img/socials/tumblr.png" alt="Кинотеатр в tumblr"></a>
         </div>
         <div>
             Hope we see you at the event! <br />
             All Rights Reserved. Envato Bangladesh © 2015
         </div>
     </footer>
+
+    <form action="order.php" method="POST">
+        <a name="orderticket"></a>
+        <h3>Заказ билетов</h3>
+        <div>
+            <input id="name" type="text" name="name" placeholder="Имя*" required="required">
+        </div> 
+        <div>
+            <label for="place">Место</label>
+            <select id="place" name="place" required="required">                
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select> 
+        </div>
+        <div>        
+            <input id="r1" type="radio" name="radio" value="r1">
+            <label for="r1">Выбор1</label>
+       </div>
+       <div>
+           <input id="r2" type="radio" name="radio" value="r2">
+           <label for="r2">Выбор2</label>
+       </div>               
+        <div>
+            <textarea placeholder="Комментарий" name="description"></textarea>
+        </div> 
+        <div>
+            <input id="checkbox" name="agree" type="checkbox" required="required">
+            <label for="checkbox">Я согласен на обработку персональных данных</label> 
+        </div>
+        <div>
+            <input name="file" type="file">
+        </div>
+        <div>
+            <button type="submit">+</button> 
+         </div>
+         <div>
+            <button type="submit">-</button> 
+         </div>        
+        <div>
+           <button type="submit">Отправить</button> 
+        </div>        
+    </form>
+    <section>
+        <h3>Работа со списком согласно ТЗ</h3>
+        <article>
+            <h4>Точечки</h4>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </article>
+
+        <article>
+            <h4>Римские цифры</h4>
+            <ol type="I">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ol>
+        </article>
+
+        <article>
+            <h4>Арабские цифры</h4>
+            <ol type="1" reversed="reversed" start="15">
+                <li>1</li>
+                <li>2</li>
+                <li>3
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                </li>
+                <li>4</li>
+                <li>5</li>
+            </ol>
+        </article>
+
+        <article>
+            <h4>Список определений</h4>
+            <dl>
+                <dt>html</dt> <dd>разметка страницы</dd>
+                <dt>css</dt> <dd>стили</dd>
+                <dt>js</dt> <dd>интерактивность страницы</dd>
+                <dt>php</dt> <dd>обработка запросов и команд пользователя</dd>
+            </dl>
+        </article>
+    </section>
 </body>
 </html>
