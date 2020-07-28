@@ -6,10 +6,11 @@
     <title>Кинотеатр в Иннополисе</title>
 </head>
 <style>
-    th,td{
+/*    th,td{
         border:2px solid black;
         padding: 3px 18px;
     }
+*/
 </style>
 <body>
     <!--Первый экран-->
@@ -40,7 +41,7 @@
     <!--Конец первого экрана-->
 
     <!--Второй экран-->
-    <section>
+    <section id="benefits">
         <div>
             <h3>Добро пожаловать!</h3>
             <p>
@@ -54,7 +55,6 @@
                  Debitis enim optio saepe voluptatibus.
             </p>            
         </div>
-        <a name="benefits"></a>
         <h3>Почему мы?</h3>
         <div>
             <article>
@@ -67,6 +67,7 @@
                     and topics. We will have loads of fun.
                 </p>
             </article>
+
             <article>
                 <img src="img/b2_icon_2.jpg"  alt="Объемный звук"/>
                 <h4>Объемный звук</h4>
@@ -77,6 +78,7 @@
                     from all over the country.
                 </p>
             </article>
+
             <article>
                 <img src="img/b2_icon_3.jpg"  alt="Удобные кресла"/>
                 <h4>Удобные кресла</h4>
@@ -90,9 +92,11 @@
         </div>       
     </section> 
     <!--Конец второго экрана--> 
+
+    <!--Третий экран-->
     <section>
         <h3>Выберите фильм</h3>
-        <table>
+        <table cellpadding="0" cellspacing="0" border="1">
             <caption>Фильмы которые показывают у нас в кинотеатре</caption>
             <thead>
                 <tr>
@@ -126,14 +130,34 @@
                     <td>Заказать билет</td>
                 </tr>
             </tbody>
-            <tfoot></tfoot>
-        </table>             
+            <tfoot>
+                <tr>
+                    <td rowspan="3" colspan="3">rowspans+colspan</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="5">colspans</td>
+                </tr>
+            </tfoot>
+        </table> 
         <p>
             Please keep in mind that the timings may differ according to the flow of the event.
             The even is actually day long and we do plan to finish it within our set time but it doesn’t have to be,
             if we all agree to hangour for some time more, what harm could it do? :)
         </p>
     </section>
+    <!--Конец третьего экрана--> 
+
+    <!--Четвертый экран-->
     <div>
         <img src="img/b4_img.jpg"  alt="Подарок каждому!"/>
         <h3>Подарок каждому!</h3>
@@ -162,8 +186,10 @@
             Получить подарок
         </div>
     </div>
-    <section>
-        <a name="movies"></a>
+    <!--Конец четвертого экрана--> 
+
+    <!--Пятый экран-->
+    <section id="movies">
         <h3>Фильмы</h3>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -177,89 +203,91 @@
                 <div>
                     <div>
                         <a href="https://www.kinopoisk.ru/film/838/" target="_blank" title="Кинотеатр в Иннополисе">Человек-паук</a>
+                        <hr />
                     </div>
                     <div>
                         More about selling in the Envato Marketplaces
                     </div>
+                    <div>
+                        <a href="#" target="_blank"><img src="img/socials/facebook .png" alt="Человек-паук в facebook"></a>
+                        <a href="#" target="_blank"><img src="img/socials/twitter.png"  alt="Человек-паук в twitter"></a>
+                        <a href="#" target="_blank"><img src="img/socials/behance.png" alt="Человек-паук в behance"></a>
+                        <a href="#" target="_blank"><img src="img/socials/dribbble .png" alt="Человек-паук в dribbble"></a>
+                    </div>
                 </div>
-            </article>
-        
+            </article> 
+
             <article>
                 <img src="img/movie/mov2.jpg"  alt="Собачья жизнь 2"/>
                 <div>
                     <div>
                         <a href="https://www.kinopoisk.ru/film/1122114/" target="_blank" title="Кинотеатр в Иннополисе">Собачья жизнь 2</a>
+                        <hr />
                     </div>
                     <div>
                         More about selling in the Envato Marketplaces
                     </div>
-                </div>
-            </article>
-            <article>
-                <img src="img/movie/mov3.jpg"  alt="Люди в черном: Интернэшнл"/>
-                <div>
                     <div>
-                        <a href="https://www.kinopoisk.ru/film/693730/" target="_blank" title="Кинотеатр в Иннополисе">Люди в черном: Интернэшнл</a>
-                    </div>
-                    <div>
-                        More about selling in the Envato Marketplaces
-                    </div>
-                </div>
-            </article>
-            <article>
-                <img src="img/movie/mov1.jpg"  alt="Человек-паук"/>
-                <div>
-                    <div>
-                        <a href="https://www.kinopoisk.ru/film/838/" target="_blank" title="Кинотеатр в Иннополисе">Человек-паук</a>
-                    </div>
-                    <div>
-                        More about selling in the Envato Marketplaces
-                    </div>
-                </div>
-            </article>
-        
-            <article>
-                <img src="img/movie/mov2.jpg"  alt="Собачья жизнь 2"/>
-                <div>
-                    <div>
-                        <a href="https://www.kinopoisk.ru/film/1122114/" target="_blank" title="Кинотеатр в Иннополисе">Собачья жизнь 2</a>
-                    </div>
-                    <div>
-                        More about selling in the Envato Marketplaces
-                    </div>
-                </div>
-            </article>
-            <article>
-                <img src="img/movie/mov3.jpg"  alt="Люди в черном: Интернэшнл"/>
-                <div>
-                    <div>
-                        <a href="https://www.kinopoisk.ru/film/693730/" target="_blank" title="Кинотеатр в Иннополисе">Люди в черном: Интернэшнл</a>
-                    </div>
-                    <div>
-                        More about selling in the Envato Marketplaces
+                        <a href="#" target="_blank"><img src="img/socials/facebook .png" alt="Собачья жизнь 2 в facebook"></a>
+                        <a href="#" target="_blank"><img src="img/socials/twitter.png"  alt="Собачья жизнь 2 в twitter"></a>
+                        <a href="#" target="_blank"><img src="img/socials/behance.png" alt="Собачья жизнь 2 в behance"></a>
+                        <a href="#" target="_blank"><img src="img/socials/dribbble .png" alt="Собачья жизнь 2 в dribbble"></a>
                     </div>
                 </div>
             </article>
 
             <article>
-                <img src="img/movie/mov1.jpg"  alt="Человек-паук"/>
+                <img src="img/movie/mov3.jpg"  alt="Люди в черном: Интернэшнл"/>
                 <div>
                     <div>
-                        <a href="https://www.kinopoisk.ru/film/838/" target="_blank" title="Кинотеатр в Иннополисе">Человек-паук</a>
+                        <a href="https://www.kinopoisk.ru/film/693730/" target="_blank" title="Кинотеатр в Иннополисе">Люди в черном: Интернэшнл</a>
+                        <hr />
                     </div>
                     <div>
                         More about selling in the Envato Marketplaces
+                    </div>
+                    <div>
+                        <a href="#" target="_blank"><img src="img/socials/facebook .png" alt="Люди в черном: Интернэшнл в facebook"></a>
+                        <a href="#" target="_blank"><img src="img/socials/twitter.png"  alt="Люди в черном: Интернэшнл в twitter"></a>
+                        <a href="#" target="_blank"><img src="img/socials/behance.png" alt="Люди в черном: Интернэшнл в behance"></a>
+                        <a href="#" target="_blank"><img src="img/socials/dribbble .png" alt="Люди в черном: Интернэшнл в dribbble"></a>
                     </div>
                 </div>
             </article>        
             <article>
+                <img src="img/movie/mov1.jpg"  alt="Человек-паук"/>
+                <div>
+                    <div>
+                        <a href="https://www.kinopoisk.ru/film/838/" target="_blank" title="Кинотеатр в Иннополисе">Человек-паук</a>
+                        <hr />
+                    </div>
+                    <div>
+                        More about selling in the Envato Marketplaces
+                    </div>
+                    <div>
+                        <a href="#" target="_blank"><img src="img/socials/facebook .png" alt="Человек-паук в facebook"></a>
+                        <a href="#" target="_blank"><img src="img/socials/twitter.png"  alt="Человек-паук в twitter"></a>
+                        <a href="#" target="_blank"><img src="img/socials/behance.png" alt="Человек-паук в behance"></a>
+                        <a href="#" target="_blank"><img src="img/socials/dribbble .png" alt="Человек-паук в dribbble"></a>
+                    </div>
+                </div>
+            </article> 
+
+            <article>
                 <img src="img/movie/mov2.jpg"  alt="Собачья жизнь 2"/>
                 <div>
                     <div>
                         <a href="https://www.kinopoisk.ru/film/1122114/" target="_blank" title="Кинотеатр в Иннополисе">Собачья жизнь 2</a>
+                        <hr />
                     </div>
                     <div>
                         More about selling in the Envato Marketplaces
+                    </div>
+                    <div>
+                        <a href="#" target="_blank"><img src="img/socials/facebook .png" alt="Собачья жизнь 2 в facebook"></a>
+                        <a href="#" target="_blank"><img src="img/socials/twitter.png"  alt="Собачья жизнь 2 в twitter"></a>
+                        <a href="#" target="_blank"><img src="img/socials/behance.png" alt="Собачья жизнь 2 в behance"></a>
+                        <a href="#" target="_blank"><img src="img/socials/dribbble .png" alt="Собачья жизнь 2 в dribbble"></a>
                     </div>
                 </div>
             </article>
@@ -269,16 +297,82 @@
                 <div>
                     <div>
                         <a href="https://www.kinopoisk.ru/film/693730/" target="_blank" title="Кинотеатр в Иннополисе">Люди в черном: Интернэшнл</a>
+                        <hr />
                     </div>
                     <div>
                         More about selling in the Envato Marketplaces
+                    </div>
+                    <div>
+                        <a href="#" target="_blank"><img src="img/socials/facebook .png" alt="Люди в черном: Интернэшнл в facebook"></a>
+                        <a href="#" target="_blank"><img src="img/socials/twitter.png"  alt="Люди в черном: Интернэшнл в twitter"></a>
+                        <a href="#" target="_blank"><img src="img/socials/behance.png" alt="Люди в черном: Интернэшнл в behance"></a>
+                        <a href="#" target="_blank"><img src="img/socials/dribbble .png" alt="Люди в черном: Интернэшнл в dribbble"></a>
+                    </div>
+                </div>
+            </article>        
+
+            <article>
+                <img src="img/movie/mov1.jpg"  alt="Человек-паук"/>
+                <div>
+                    <div>
+                        <a href="https://www.kinopoisk.ru/film/838/" target="_blank" title="Кинотеатр в Иннополисе">Человек-паук</a>
+                        <hr />
+                    </div>
+                    <div>
+                        More about selling in the Envato Marketplaces
+                    </div>
+                    <div>
+                        <a href="#" target="_blank"><img src="img/socials/facebook .png" alt="Человек-паук в facebook"></a>
+                        <a href="#" target="_blank"><img src="img/socials/twitter.png"  alt="Человек-паук в twitter"></a>
+                        <a href="#" target="_blank"><img src="img/socials/behance.png" alt="Человек-паук в behance"></a>
+                        <a href="#" target="_blank"><img src="img/socials/dribbble .png" alt="Человек-паук в dribbble"></a>
+                    </div>
+                </div>
+            </article> 
+
+            <article>
+                <img src="img/movie/mov2.jpg"  alt="Собачья жизнь 2"/>
+                <div>
+                    <div>
+                        <a href="https://www.kinopoisk.ru/film/1122114/" target="_blank" title="Кинотеатр в Иннополисе">Собачья жизнь 2</a>
+                        <hr />
+                    </div>
+                    <div>
+                        More about selling in the Envato Marketplaces
+                    </div>
+                    <div>
+                        <a href="#" target="_blank"><img src="img/socials/facebook .png" alt="Собачья жизнь 2 в facebook"></a>
+                        <a href="#" target="_blank"><img src="img/socials/twitter.png"  alt="Собачья жизнь 2 в twitter"></a>
+                        <a href="#" target="_blank"><img src="img/socials/behance.png" alt="Собачья жизнь 2 в behance"></a>
+                        <a href="#" target="_blank"><img src="img/socials/dribbble .png" alt="Собачья жизнь 2 в dribbble"></a>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <img src="img/movie/mov3.jpg"  alt="Люди в черном: Интернэшнл"/>
+                <div>
+                    <div>
+                        <a href="https://www.kinopoisk.ru/film/693730/" target="_blank" title="Кинотеатр в Иннополисе">Люди в черном: Интернэшнл</a>
+                        <hr />
+                    </div>
+                    <div>
+                        More about selling in the Envato Marketplaces
+                    </div>
+                    <div>
+                        <a href="#" target="_blank"><img src="img/socials/facebook .png" alt="Люди в черном: Интернэшнл в facebook"></a>
+                        <a href="#" target="_blank"><img src="img/socials/twitter.png"  alt="Люди в черном: Интернэшнл в twitter"></a>
+                        <a href="#" target="_blank"><img src="img/socials/behance.png" alt="Люди в черном: Интернэшнл в behance"></a>
+                        <a href="#" target="_blank"><img src="img/socials/dribbble .png" alt="Люди в черном: Интернэшнл в dribbble"></a>
                     </div>
                 </div>
             </article>        
        </div>
-    </section>  
-    <section>
-        <a name="contacts"></a>
+    </section> 
+    <!--Конец пятого экрана--> 
+
+    
+    <section id="contacts">
         <img src="img/map.png"  alt="Кинотеатр на карте"/>
     </section>
     <footer style="height:220px">
@@ -295,11 +389,14 @@
         </div>
     </footer>
 
-    <form action="order.php" method="POST">
-        <a name="orderticket"></a>
+    <!--Шестой экран-->
+    <form id="orderticket" action="order.php" method="POST" enctype="multipart/form-data">
         <h3>Заказ билетов</h3>
         <div>
             <input id="name" type="text" name="name" placeholder="Имя*" required="required">
+        </div> 
+        <div>
+            <input id="email" type="email" name="email" placeholder="Ваша почта" required="required">
         </div> 
         <div>
             <label for="place">Место</label>
@@ -316,6 +413,7 @@
                 <option>10</option>
             </select> 
         </div>
+
         <div>        
             <input id="r1" type="radio" name="radio" value="r1">
             <label for="r1">Выбор1</label>
@@ -333,17 +431,22 @@
         </div>
         <div>
             <input name="file" type="file">
-        </div>
+        </div> 
         <div>
-            <button type="submit">+</button> 
-         </div>
-         <div>
-            <button type="submit">-</button> 
-         </div>        
+           <button type="submit">Заказать</button> 
+        </div> 
         <div>
-           <button type="submit">Отправить</button> 
+           <input type="submit" value="Заказать" /> 
         </div>        
     </form>
+    <div>
+        <button type="submit">Заказать</button> 
+    </div> 
+    <div>
+        <input type="submit" value="Заказать" /> 
+    </div>   
+    <!--Конец шестого экрана--> 
+
     <section>
         <h3>Работа со списком согласно ТЗ</h3>
         <article>
@@ -397,5 +500,6 @@
             </dl>
         </article>
     </section>
+
 </body>
 </html>
