@@ -64,6 +64,9 @@ body{
 .movie-list__table__row.even {
     background-color: #4b4d4f;
 }
+.movie-list__table__row.third {
+    background-color: #6c6c6c;
+}
 
 .movie-list__table__cell_body {
     padding-bottom: 12px;
