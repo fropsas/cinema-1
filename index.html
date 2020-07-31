@@ -397,9 +397,11 @@
     <form id="orderticket" action="order.php" method="POST" enctype="multipart/form-data">
         <h3>Заказ билетов</h3>
         <div>
+            <label for="name">Имя:</label>
             <input id="name" type="text" name="name" placeholder="Имя*" required="required">
         </div> 
         <div>
+            <label for="email">Email:</label>
             <input id="email" type="email" name="email" placeholder="Ваша почта" required="required">
         </div> 
         <div>
@@ -427,15 +429,16 @@
            <label for="r2">Выбор2</label>
        </div>               
         <div>
-            <textarea placeholder="Комментарий" name="description"></textarea>
-            <label></label>
+            <textarea placeholder="Комментарий" name="description" id="description"></textarea>
+            <label for="description">Комментарий</label>
         </div> 
         <div>
             <input id="checkbox" name="agree" type="checkbox" required="required">
             <label for="checkbox">Я согласен на обработку персональных данных</label> 
         </div>
         <div>
-            <input name="file" type="file">
+            <label for="file">Добавить файл</label>
+            <input id="file" name="file" type="file">
         </div> 
         <div>
            <button type="submit">Заказать</button> 
