@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кинотеатр в Иннополисе</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/main.css?v=2">
+    <link rel="stylesheet" href="style/icons.css">
 </head>
 <style>
 /*    th,td{
@@ -95,65 +98,66 @@
 
     <!--Третий экран-->
     <section>
-        <h3>Выберите фильм</h3>
-        <table cellpadding="0" cellspacing="0" border="1">
-            <caption>Фильмы которые показывают у нас в кинотеатре</caption>
-            <thead>
-                <tr>
-                    <th>Check</tg>
-                    <th>Начало сеанса</th>
-                    <th>Название фильма</th>
-                    <th>Жанр</th>
-                    <th>Заказать билет</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Check</td>
-                    <td>10:00</td>
-                    <td>Человек-паук</td>
-                    <td>фантастика</td>
-                    <td>Заказать билет</td>
-                </tr>
-                <tr>
-                    <td>Check</td>
-                    <td>12:00</td>
-                    <td>Собачья жизнь 2</td>
-                    <td>фэнтези</td>
-                    <td>Заказать билет</td>
-                </tr>
-                <tr>
-                    <td>Check</td>
-                    <td>14:00</td>
-                    <td>Люди в черном</td>
-                    <td>фэнтези</td>
-                    <td>Заказать билет</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td rowspan="3" colspan="3">rowspans+colspan</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="5">colspans</td>
-                </tr>
-            </tfoot>
-        </table> 
-        <p>
-            Please keep in mind that the timings may differ according to the flow of the event.
-            The even is actually day long and we do plan to finish it within our set time but it doesn’t have to be,
-            if we all agree to hangour for some time more, what harm could it do? :)
-        </p>
+        <div class="container">
+            <div class="movie-list">
+                <h2 class="movie-list__header">Выберите фильм</h2>
+                <table class="movie-list__table" cellpadding="0" cellspacing="0" >
+                    <colgroup>
+                        <col class="movie-list__table__timeheader">
+                        <col class="movie-list__table__movieheader">
+                        <col class="movie-list__table__orderheader">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="movie-list__table__cell movie-list__table__cell_header">
+                                <a class="movie-list__table__header-sorting" href="#">
+                                    Time
+                                    <i class="icon icon-sort-asc"></i>
+                                </a>
+                            </th>
+                            <th class="movie-list__table__cell movie-list__table__cell_header">
+                                <a class="movie-list__table__header-sorting" href="#">
+                                    Stuff that will happen  
+                                </a>
+                            </th>
+                            <th class="movie-list__table__cell movie-list__table__cell_header">
+                                Билет     
+                            </th>
+                                                  
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="movie-list__table__row odd">
+                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_time">10am - 12pm</td>
+                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_movieheader">Introduction and presentations about Envato</td>
+                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_order"><img src="img/More icon.png" alt="Introduction and presentations about Envato"></td>
+                        </tr>
+                        <tr class="movie-list__table__row even">
+                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_time">12pm - 02pm</td>
+                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_movieheader">Sessions by honorable guests and Speakers</td>
+                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_order"><img src="img/More icon.png" alt="Introduction and presentations about Envato"></td>
+                        </tr>
+                        <tr class="movie-list__table__row odd">
+                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_time">02pm - 03pm</td>
+                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_movieheader">Break and Mingle time with the authors</td>
+                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_order"><img src="img/More icon.png" alt="Introduction and presentations about Envato"></td>
+                        </tr>
+                        <tr class="movie-list__table__row even">
+                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_time">03pm - 05pm</td>
+                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_movieheader">Portfolio Review, Rewards and Ending Presentation</td>
+                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_order"><img src="img/More icon.png" alt="Introduction and presentations about Envato"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                </table> 
+                <p class="movie-list__p">
+                    Please keep in mind that the timings may differ according to the flow of the event.
+                    The even is actually day long and we do plan to finish<br />it within our set time but it doesn’t have to be,
+                    if we all agree to hangour for some time more, what harm could it do? :)
+                </p>
+            </div>
+        </div>
     </section>
     <!--Конец третьего экрана--> 
 
@@ -424,6 +428,7 @@
        </div>               
         <div>
             <textarea placeholder="Комментарий" name="description"></textarea>
+            <label></label>
         </div> 
         <div>
             <input id="checkbox" name="agree" type="checkbox" required="required">

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  .svg {
+    border-radius: 50%;
+    background-color: rgb(251, 175, 22);
+    box-shadow: 10.5px 18.187px 12px 0px rgba(35, 31, 32, 0.55);
+  }
+</style>
+<body>
+  
+  <svg 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="48px" height="48px"
+    class="svg">
+    <defs>
+    <filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="48px" height="48px"  >
+      <feOffset in="SourceAlpha" dx="0" dy="1" />
+      <feGaussianBlur result="blurOut" stdDeviation="1" />
+      <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
+      <feComposite operator="atop" in="floodOut" in2="blurOut" />
+      <feComponentTransfer><feFuncA type="linear" slope="0.25"/></feComponentTransfer>
+      <feMerge>
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+    </filter>
+
+    </defs>
+    <g filter="url(#Filter_0)">
+    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+    d="M23.500,44.999 C11.073,44.999 1.000,34.926 1.000,22.500 C1.000,10.073 11.073,-0.000 23.500,-0.000 C35.926,-0.000 46.000,10.073 46.000,22.500 C46.000,34.926 35.926,44.999 23.500,44.999 ZM24.044,10.170 C18.962,10.170 20.120,16.199 19.951,18.397 C19.951,18.414 16.844,18.397 16.844,18.397 L16.844,22.488 L19.942,22.488 L19.942,36.884 L25.089,36.884 L25.078,22.488 L28.526,22.488 L29.202,18.375 L25.089,18.420 C25.089,15.500 24.863,14.312 26.570,14.312 C26.723,14.312 29.219,14.306 29.219,14.306 L29.224,10.170 L24.044,10.170 Z"/>
+    </g>
+  </svg>
+</body>
+</html>
