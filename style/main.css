@@ -1,40 +1,207 @@
+/**                         Общие стили                     */
 body{
     font-family:'Roboto',sans-serif;
+    min-width: 320px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-text-size-adjust: 100%;
 }
-@font-face {
+.header {
     font-family:'Roboto';
-    src: url('/fonts/roboto/Roboto-Regular.ttf') format('truetype');
-    font-weight: 400;
-}
-@font-face {
-    font-family:'Roboto';
-    src: url('/fonts/roboto/Roboto-Bold.ttf') format('truetype');
     font-weight: 700;
+    font-size: 50px;
 }
-
-@font-face {
-    font-family:'RobotoBlack';
-    src: url('/fonts/roboto/Roboto-Black.ttf') format('truetype');
-    font-weight: 400;
+.clear {
+    clear: both;
 }
 .container {
     max-width: 1030px;
     margin: 0 auto;
+    position: relative;
 }
+a:hover {
+    color: #90d23d !important;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/**                         Компоненты                      */
+
+
+/* screen-1 */
+.screen-1 {
+    min-height: 100vh;
+    overflow: hidden;
+    background: url("../img/StockPhoto.png") no-repeat top center / cover;
+    position: relative;
+}
+    .screen-1:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-bottom: 120px solid white;
+        border-left: 100vw solid transparent;
+    }
+    .screen-1__header {
+        overflow: hidden;
+        position: absolute;
+        top: 60px;
+        width: 100%;    
+        font-family: "RobotoThin";
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .screen-1__header__logo {
+        float:left;
+        overflow: hidden;
+        width: 25%;
+    }
+    .screen-1__header__nav {
+        float:left;
+        width: 50%;
+        margin: 13px 0 0 0;
+        text-align: center;
+    }
+    .screen-1__header__nav li{
+        display: inline-block;
+    }
+    .screen-1__header__nav li + li{
+        margin-left: 11px;
+    }
+    .screen-1__header__nav a{
+        font-size: 15px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 300;
+        transition:  0.2s;
+        text-decoration: none;
+    }
+    .screen-1__header__location {
+        float:left;
+        width: 25%;
+        text-align: right;
+        color: #ffffff;
+        padding-top: 14px;
+    }
+
+    .screen-1__welcome {
+        text-align: center;
+        color: #ffffff;
+
+        padding: calc(50vh - 120px) 0 0;
+    }
+    .screen-1__welcome__h1 {
+        font-family: "RobotoThin";
+        font-size: 80px;
+        font-weight: 400;
+    }
+    .screen-1__welcome__h2 {
+        font-family: "Roboto";
+        font-size: 50px;
+        font-weight: 400;
+    }
+
+
+/*benefits*/
+    .benefits {
+        position: relative;
+        margin-top: 73px;
+    }
+    .benefits__header {
+        margin-bottom: 77px;
+    }
+    .benefits__panel {
+        margin: 0 -30px;
+    }
+    .benefits__screen{
+        display: inline-block;
+        float: left;
+        padding: 0 30px;
+        width: 33.33%;
+        text-align: center;
+        overflow: hidden;
+    }
+    .benefits__image {
+        height: 300px;
+    }
+    .benefits__image__screen {
+        margin-top: 54px;
+        margin-left: -6px;
+    }
+
+    .benefits__image__sound {
+        margin-top: 49px;
+        margin-left: 29px;
+    }
+
+    .benefits__image__sofa {
+        margin-top: 79px;
+        margin-left: 4px;
+    }
+
+    .benefits__title {
+        font-size: 35px;
+        font-family:'RobotoBlack';
+        font-weight: 400;
+    }
+    .benefits__caption {
+        margin-top: 22px;
+        font-size: 14px;
+        font-family:'RobotoLight';
+        font-weight: 400;
+    }
+
+/*welcome*/
+    .welcome {
+        position: absolute;
+        right: 0;
+        top: -203px;
+
+        width: 516px;
+        height: 267px;
+        padding: 32px;
+        z-index: 2;
+        box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
+        background-color: #ffffff;
+
+    }
+    .welcome__header {
+        font-size: 40px;
+        margin-bottom: 28px;
+    }
+    .welcome__text {
+        font-size: 14px;
+        font-family:'RobotoLight';
+        font-weight: 400;
+        margin-top: 17px;
+    }
+
+
+
+
+
+.movie-list {
+    margin-top: 135px;
+    margin-bottom: 156px;
+}
+
+/*movie-list*/
 
 .movie-list__header {
     font-size: 50px;
     color: #252525;
     text-align: center;
     font-weight: 700;
+    margin-bottom: 82px;
 }
-
 .movie-list__table {
     border-radius: 15px;
     border-collapse: collapse;
     overflow: hidden;
     width: 100%;
-    margin-top: 77px;
     vertical-align: top;
 }
 .movie-list__table__cell {
@@ -47,10 +214,9 @@ body{
     font-weight: 400;
     font-family:'RobotoBlack',sans-serif;
     text-align: center;
-    padding-bottom: 19px;
-    padding-top: 19px;
+    padding-bottom: 20px;
+    padding-top: 24px;
 }
-
 .movie-list__table__row {
     color: #ffffff;
     font-size: 22px;
@@ -69,8 +235,8 @@ body{
 }
 
 .movie-list__table__cell_body {
-    padding-bottom: 12px;
-    padding-top: 24px;
+    padding-bottom: 22px;
+    padding-top: 30px;
 }
 
 .movie-list__table__timeheader {
@@ -86,7 +252,7 @@ body{
 .movie-list__table__cell_body_order {
     text-align: center;
     width: 130px;
-    
+    padding-top: 20px;
 }
 .movie-list__table__row__order {
     text-align: center;
@@ -102,3 +268,193 @@ body{
     text-decoration: none;
     color: #fff;
 }
+
+
+.gift_panel {
+    overflow: hidden;
+    background: url("../img/cinema_tickets.png") no-repeat center / cover;
+    position: relative;
+    color: white;
+    text-align: right;
+    padding-top: 140px;
+    padding-bottom: 170px;
+}
+
+.gift_panel:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 120px solid white;
+    border-right: 100vw solid transparent;
+}
+.gift_panel:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 120px solid white;
+    border-left: 100vw solid transparent;
+}
+.gift_panel__header {
+    margin-bottom: 60px;
+}
+.gift_panel__parag {
+    font-size: 14px;
+    font-family:'RobotoLight';
+    font-weight: 400;
+    line-height: 1.2;
+
+    margin-top: 20px;
+    margin-left: 370px;
+}
+.gift_panel__get {
+    font-size: 18px;
+    font-family: "Roboto";
+    line-height: 1.2;
+    border-radius: 15px;
+    background-color: rgb(144, 210, 61);
+    color: rgb(255, 255, 255);
+    width: 220px;
+    height: 55px;
+
+    margin-top: 40px;
+}
+
+
+.pre_gift_panel {
+    position: relative;
+}
+.pre_gift_panel__img {
+    position: absolute;
+    z-index: 2;
+    left: -1px;
+    top: -70px;
+
+    background-color: rgb(251, 175, 22);
+    box-shadow: 10.5px 18.187px 12px 0px rgba(35, 31, 32, 0.55);
+    border-radius: 50%;
+}
+
+.movies {
+    margin-top: 85px;
+}
+.movies__header {
+
+}
+.movies__caption {
+    margin-bottom: 18px;
+    margin-top: 42px;
+    font-size: 14px;
+    font-family:'RobotoLight';
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.movies__table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 78px;
+    width: 100%;
+}
+.movies__tr {
+    margin-bottom: 20px;
+}
+.movies__card {
+    position: relative;
+    width: 296px;
+    height: 296px;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+.movies__card__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.movies__card__descr {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 15px;
+    background-color: rgba(144, 210, 61, 0.82);
+    padding: 25px 20px;
+    color: #fff;
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+.movies__card:hover .movies__card__descr {
+    display: block;
+    transform: translateY(0%);
+}
+.movies__card__name {
+    font-size: 35px;
+    font-family:'RobotoBlack';
+    font-weight: 400;
+}
+.movies__card__limiter {
+    width: 83px;
+    height: 6px;
+    background-color: #fff;
+    margin: 10px 0 17px 0;
+    padding: 0;
+}
+.movies__card__about {
+    font-size: 18px;
+    font-family:'RobotoMedium';
+    font-weight: 400;
+    line-height: 1.2;
+}
+.movies__card__socials {
+    position: absolute;
+    bottom: 24px;
+    left: 31px;
+}
+.movies__card-left {
+    text-align: left;
+}
+.movies__card-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.movies__card-right {
+    margin-left: auto;
+}
+.movies__card__social {
+    width: 32px;
+    height: 31px;
+    margin-left: 2px;
+}
+
+.contacts {
+    margin-top: 60px;
+    width: 100%;
+}
+.contacts__map {
+    width: 100%;
+}
+
+
+.footer {
+    height: 220px;
+    padding-top: 60px;
+    text-align: center;
+    background-color: rgb(144, 210, 61);
+}
+
+.footer__social {
+    padding: 0 5px
+}
+
+.footer__cr {
+    margin-top: 30px;
+    color: #fff;
+    line-height: 1.2;
+    font-size: 18px;
+    
+    font-family:'RobotoLight';
+    font-weight: 400;
+}
+  

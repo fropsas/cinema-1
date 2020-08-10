@@ -1,11 +1,11 @@
 
 @font-face {
 	font-family: "fico";
-	src: url("/fonts/icons/fico.eot");
-	src: url("/fonts/icons/fico.eot?#iefix") format("embedded-opentype"),
- 	     url("/fonts/icons/fico.woff") format("woff"),
-	     url("/fonts/icons/fico.ttf") format("truetype"),
-	     url("/fonts/icons/fico.svg#fico") format("svg");
+	src: url("../fonts/icons/fico.eot");
+	src: url("../fonts/icons/fico.eot?#iefix") format("embedded-opentype"),
+ 	     url("../fonts/icons/fico.woff") format("woff"),
+	     url("../fonts/icons/fico.ttf") format("truetype"),
+	     url("../fonts/icons/fico.svg#fico") format("svg");
 	}
 
 .icon {
