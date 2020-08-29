@@ -1,6 +1,6 @@
 /**                         Общие стили                     */
 html {
-    font-size: 20px; /*1.464vw*/;
+    font-size: 20px; /*1.464vw;*/
 }
 body{
     font-family:'Roboto',sans-serif;
@@ -50,7 +50,6 @@ a {
         border-left: 100vw solid transparent;
     }
     .screen-1__header {
-        overflow: hidden;
         position: absolute;
         top: 60px;
         width: 100%;    
@@ -109,6 +108,9 @@ a {
         font-family: "Roboto";
         font-size: 2.5rem;
         font-weight: 400;
+    }
+    .screen-1__mobile-nav {
+        display: none;
     }
 
 
@@ -371,7 +373,7 @@ a {
     line-height: 1.2;
 }
 
-/*.movies-flex {
+.movies-flex {
     display: flex;
     flex-wrap: wrap;
     margin: 3.9rem -1.64rem 0 -1.64rem;
@@ -391,7 +393,7 @@ a {
     top: 0;
     transform: translateY(0%);
     transition: 0.5s;
-}*/
+}
 
 .movies-grid {
     display: grid;
@@ -399,6 +401,7 @@ a {
     grid-template-areas: "mov . mov";
     grid-row-gap: 3.28rem;
     grid-column-gap: 3.28rem;
+    margin: 3.9rem 0 0 0;
 }
 /*.movies-grid__card-wrapper {
     grid: 0 0 33%;

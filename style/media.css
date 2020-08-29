@@ -1,0 +1,81 @@
+
+.screen-1__header__logo {
+    width: auto;
+}
+.benefits__screen{   
+    float: right;
+}
+.screen-1__header__location {
+    display: none;
+}
+.screen-1__mobile-nav {
+    display: block;
+    float: left;
+    width: 25%;
+    position: relative;
+}
+.screen-1__mobile-button {
+    position: relative;
+    width: 25px;
+    height: 22px;
+}
+.screen-1__mobile-button::before,
+.screen-1__mobile-button::after,
+.screen-1__mobile-button span {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+}
+.screen-1__mobile-button::before {
+    top: 0;
+}
+.screen-1__mobile-button::after {
+    bottom: 0;
+}
+.screen-1__mobile-button span {
+    top: 50%;
+    margin-top: -1px;
+}
+.screen-1__menu {
+    position: absolute;
+    right: 0;
+    padding: 2rem;
+    background-color: #000C;
+    z-index: 100;
+    text-align: right;
+    transform: translateX(100%);
+    transition: .2s;
+}
+.screen-1__header__nav li{
+    display: block;
+}
+.screen-1__header__nav li + li{
+    margin-left: 0;
+    margin-top: .7rem;
+}
+.screen-1__menu--opened {
+    transform: translateX(0);
+}
+.screen-1__mobile-button--opened::after {
+    transform: rotate(45deg);
+    top: 50%;
+}
+.screen-1__mobile-button--opened span {
+    display: none;
+}
+.screen-1__mobile-button--opened::before {
+    transform: rotate(-45deg);
+    top: 50%;
+}
+.screen-1__header {
+    display: flex;
+    flex-direction: row;
+}
+.screen-1__header__logo {
+    flex: 1;
+}
+.screen-1__header__nav {
+    width: 50px;
+}
