@@ -178,75 +178,64 @@ var films = {
         var movies_flex = document.getElementById(films.target);
         movies_flex.innerHTML = "";
         this.loadfilms(callback);
-        /*
-        for (var i = 0; i < films.list.length; i++) {
-            var c_mov = films.list[i];
-            movies_flex.innerHTML += `
-                <div class="movies-flex__card-wrapper">
-                    <div class="movies-flex__card">
-                        <img class="movies__card__img" src="${c_mov.img}" alt="${c_mov.name}"/>
-                        <div class="movies__card__descr">
-                            <div class="movies__card__name">
-                                <a
-                                    href="${c_mov.link_kp}"
-                                    target="_blank"
-                                    title="Кинотеатр в Иннополисе"
-                                >
-                                    ${c_mov.name}
-                                </a>
-                            </div>
-                            <div class="movies__card__limiter"></div>
-                            <div class="movies__card__about">
-                                ${c_mov.about}
-                            </div>
-                            <div class="movies__card__socials">
-                                <a href="${c_mov.socials.facebook}" target="_blank">
-                                    <img class="movies__card__social" src="img/socials/facebook.svg" alt="${c_mov.name} в facebook">
-                                </a>
-                                <a href="${c_mov.socials.twitter}" target="_blank">
-                                    <img class="movies__card__social" src="img/socials/twitter.svg" alt="${c_mov.name} в twitter">
-                                </a>
-                                <a href="${c_mov.socials.behance}" target="_blank">
-                                    <img class="movies__card__social" src="img/socials/behance.svg" alt="${c_mov.name} в behance">
-                                </a>
-                                <a href="${c_mov.socials.dribbble}" target="_blank">
-                                    <img class="movies__card__social" src="img/socials/dribbble.svg" alt="${c_mov.name} в dribbble">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }*/
     }
 };
 
 var genres = [
-    'фентези',
-    'драма',
+    'приключения',
     'комедия',
     'мультфильм',
-    'боевик'
+    'мюзикл',
+    'драма',
+    'вестерн',
+    'биография',
+    'мелодрама'
 ]
 
 var shedule = {
     list: [
         {
-            kpId: 1045172,
+            name: 'Папаши без вредных привычек',
             time: '10:00',
+            genres: [
+                0, 1
+            ]
         },
         {
-            kpId: 1005878,
-            time: '12:00'
+            name: 'Король Лев',
+            time: '12:00',
+            genres: [
+                2, 3, 4
+            ]
         },
         {
-            kpId: 535341,
-            time: '14:00'
+            name: 'Йеллоустоун',
+            time: '14:00',
+            genres: [
+                4, 5
+            ]
         },
         {
-            kpId: 530,
-            time: '16:00'
-        }
+            name: '1+1',
+            time: '16:00',
+            genres: [
+                1, 4, 6
+            ]
+        },
+        {
+            name: 'Игры разума',
+            time: '20:00',
+            genres: [
+                7, 4, 6
+            ]
+        },
+        {
+            name: '1+1',
+            time: '23:00',
+            genres: [
+                1, 4, 6
+            ]
+        },
     ],
     target: "movie-shedule",
     show: function() {
@@ -254,28 +243,21 @@ var shedule = {
         movies_shedule.innerHTML = "";
         for (var i = 0; i < shedule.list.length; i++) {
             let s = shedule.list[i];
-            let film = films.getFilmById(s.kpId);
-            film.then(result => {
-                var prepareFilm = films.parseFilm(result);
-                var c_mov = {
-                    time: s.time,
-                    name: prepareFilm.name,
-                    genres: prepareFilm.genre
-                }
-                var h = ""
-                h += 
-                `
-                <tr class="movie-list__table__row odd">
-                    <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_time">${c_mov.time}</td>
-                    <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_movieheader">${c_mov.name}</td>
-                    <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_order">`;
-                for (var j = 0; j < c_mov.genres.length; j++)    
-                    h += c_mov.genres[j].genre + ` `;
-                    h += `</td>
-                </tr>
-                `;
-                movies_shedule.innerHTML += h;
-            })
+            var c_mov = shedule.list[i];
+            
+            var h = ""
+            h += 
+            `
+            <tr class="movie-list__table__row odd">
+                <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_time">${c_mov.time}</td>
+                <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_movieheader">${c_mov.name}</td>
+                <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_order">`;
+            for (var j = 0; j < c_mov.genres.length; j++)    
+                h += genres[c_mov.genres[j]] + ` `;
+                h += `</td>
+            </tr>
+            `;
+            movies_shedule.innerHTML += h;
         }
     }
 }

@@ -241,7 +241,7 @@ a {
     text-align: center;
     padding-bottom: 1rem;
     padding-top: 1.2rem;
-    line-height: calc(80vh / 5 - 2.2rem);
+    -line-height: calc(80vh / 5 - 2.2rem);
 }
 .movie-list__table__row {
     color: #ffffff;
@@ -263,7 +263,7 @@ a {
 .movie-list__table__cell_body {
     padding-bottom: 1.1rem;
     padding-top: 1.5rem;
-    line-height: calc(80vh / 5 - 2.6rem);
+    -line-height: calc(80vh / 5 - 2.6rem);
 }
 
 .movie-list__table__timeheader {
