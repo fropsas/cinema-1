@@ -1,6 +1,11 @@
 /**                         Общие стили                     */
 html {
-    font-size: 20px; /*1.464vw;*/
+    font-size: 1.464vw;
+}
+@media (min-width: 1030px) {
+    html {
+        font-size: 20px;
+    }
 }
 body{
     font-family:'Roboto',sans-serif;
@@ -267,14 +272,14 @@ a {
 }
 .movie-list__table__cell_body_movieheader {
     padding-left: 3.8rem;
+    width: 220px;
 }
 .movie-list__table__cell_body_time {
     text-align: center;
 }
 .movie-list__table__cell_body_order {
-    text-align: center;
-    width: 130px;
-    padding-top: 1rem;
+    text-align: left;
+    padding-left: 3.8rem;
 }
 .movie-list__table__row__order {
     text-align: center;
@@ -372,11 +377,31 @@ a {
     font-weight: 400;
     line-height: 1.2;
 }
-
+.movies-carousel {
+    display: flex;
+}
+.movies-carousel--prev, .movies-carousel--next {
+    margin-top: 3.9rem;
+    width: 1.64rem;
+    z-index: 2;
+    border: 1px solid rgb(144, 210, 61);
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+}
+.movies-carousel--prev i::before, .movies-carousel--next i::before {
+    font-size: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -0.5rem 0 0 -0.5rem;
+    color: rgb(144, 210, 61);
+}
 .movies-flex {
     display: flex;
     flex-wrap: wrap;
-    margin: 3.9rem -1.64rem 0 -1.64rem;
+    flex: 1;
+    margin: 3.9rem /*-1.64rem*/ 0 0 /*-1.64rem*/ 0;
 }
 .movies-flex__card-wrapper {
     flex: 0 0 33%;
@@ -385,11 +410,14 @@ a {
 .movies-flex__card {
     position: relative;
     text-decoration: none;
-    margin-bottom: 2rem;
     overflow: hidden;
 }
+.movies-flex__card::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
 .movies-flex__card:hover .movies__card__descr {
-    -display: block;
     top: 0;
     transform: translateY(0%);
     transition: 0.5s;
@@ -414,7 +442,6 @@ a {
     overflow: hidden;
 }
 .movies-grid__card:hover .movies__card__descr {
-    -display: block;
     top: 0;
     transform: translateY(0%);
     transition: 0.5s;
@@ -430,19 +457,22 @@ a {
 }
 .movies__card {
     position: relative;
-    width: 296px;
-    height: 296px;
+    -width: 296px;
+    -height: 296px;
     text-decoration: none;
     margin-bottom: 2rem;
     overflow: hidden;
+    border-radius: 15px;
 }
 .movies__card__img {
     display: block;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 15px;
 }
 .movies__card__descr {
-    -display: none;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -455,12 +485,13 @@ a {
     transform-origin:left;
 }
 .movies__card:hover .movies__card__descr {
-    -display: block;
     top: 0;
     transform: translateY(0%);
     transition: 0.5s;
 }
 .movies__card__name {
+}
+.movies__card__name a {
     font-size: 1.75rem;
     font-family:'RobotoBlack';
     font-weight: 400;
@@ -477,6 +508,8 @@ a {
     font-family:'RobotoMedium';
     font-weight: 400;
     line-height: 1.2;
+    height: 5rem;
+    overflow: hidden;
 }
 .movies__card__socials {
     position: absolute;
@@ -487,6 +520,8 @@ a {
     margin: 0 .25rem;
     border-radius: 50%;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+    display: unset !important;
+    width: unset !important;
 }
 .movies__card__social:hover {
     box-shadow: initial;

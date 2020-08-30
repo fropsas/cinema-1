@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="style/icons.css">
     <link rel="stylesheet" href="style/fonts.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="style/media.css">
+    <script src="js/jquery/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="js/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/owlcarousel/css/owl.theme.default.min.css">    
+    <script src="js/owlcarousel/js/owl.carousel.js"></script>
+    <script src="js/owlcarousel/js/owl.navigation.js"></script>
+
+
+    <link rel="stylesheet" href="style/cinema_owlcarousel.css">
+    <script src="js/script.js"></script>
+    <script src="js/film.js"></script>
 </head>
 <body>
     <!--Первый экран-->
@@ -74,7 +84,7 @@
                 </article>
                 <article class="benefits__screen">
                     <div class="benefits__image">
-                        <img class="benefits__image__sound" src="img/b2_icon_2.jpg"  alt="Объемный звук"/>
+                        <img class="benefits__image__sound" src="img/b2_icon_2.jpg" alt="Объемный звук"/>
                     </div>
                     <h4 class="benefits__title">Объемный звук</h4>
                     <p class="benefits__caption">
@@ -86,7 +96,7 @@
                 </article>
                 <article class="benefits__screen">
                     <div class="benefits__image">
-                        <img class="benefits__image__sofa" src="img/b2_icon_3.jpg"  alt="Удобные кресла"/>
+                        <img class="benefits__image__sofa" src="img/b2_icon_3.jpg" alt="Удобные кресла"/>
                     </div>
                     <h4 class="benefits__title">Удобные кресла</h4>
                     <p class="benefits__caption">
@@ -111,7 +121,7 @@
                 </article>
                 <article class="benefits__screen">
                     <div class="benefits__image">
-                        <img class="benefits__image__sound" src="img/b2_icon_2.jpg"  alt="Объемный звук"/>
+                        <img class="benefits__image__sound" src="img/b2_icon_2.jpg" alt="Объемный звук"/>
                     </div>
                     <h4 class="benefits__title">Объемный звук</h4>
                     <p class="benefits__caption">
@@ -123,7 +133,7 @@
                 </article>
                 <article class="benefits__screen">
                     <div class="benefits__image">
-                        <img class="benefits__image__sofa" src="img/b2_icon_3.jpg"  alt="Удобные кресла"/>
+                        <img class="benefits__image__sofa" src="img/b2_icon_3.jpg" alt="Удобные кресла"/>
                     </div>
                     <h4 class="benefits__title">Удобные кресла</h4>
                     <p class="benefits__caption">
@@ -154,42 +164,22 @@
                         <tr>
                             <th class="movie-list__table__cell movie-list__table__cell_header">
                                 <a class="movie-list__table__header-sorting" href="#">
-                                    Time
+                                    Время
                                     <i class="icon icon-sort-asc"></i>
                                 </a>
                             </th>
                             <th class="movie-list__table__cell movie-list__table__cell_header">
                                 <a class="movie-list__table__header-sorting" href="#">
-                                    Stuff that will happen
+                                    Фильм
                                 </a>
                             </th>
                             <th class="movie-list__table__cell movie-list__table__cell_header">
-                                Билет
+                                Жанр
                             </th>
                                                   
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="movie-list__table__row odd">
-                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_time">10am - 12pm</td>
-                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_movieheader">Introduction and presentations about Envato</td>
-                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_order"><img src="img/More icon.png" alt="Introduction and presentations about Envato"></td>
-                        </tr>
-                        <tr class="movie-list__table__row even">
-                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_time">12pm - 02pm</td>
-                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_movieheader">Sessions by honorable guests and Speakers</td>
-                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_order"><img src="img/More icon.png" alt="Introduction and presentations about Envato"></td>
-                        </tr>
-                        <tr class="movie-list__table__row third">
-                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_time">02pm - 03pm</td>
-                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_movieheader">Break and Mingle time with the authors</td>
-                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_order"><img src="img/More icon.png" alt="Introduction and presentations about Envato"></td>
-                        </tr>
-                        <tr class="movie-list__table__row even">
-                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_time">03pm - 05pm</td>
-                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_movieheader">Portfolio Review, Rewards and Ending Presentation</td>
-                            <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_order"><img src="img/More icon.png" alt="Introduction and presentations about Envato"></td>
-                        </tr>
+                    <tbody id="movie-shedule">
                     </tbody>
                     <tfoot>
                     </tfoot>
@@ -207,7 +197,7 @@
     <!--Четвертый экран-->
     <section class="pre_gift_panel">
         <div class="container">
-            <img class="pre_gift_panel__img" src="img/b4_img.jpg"  alt="Подарок каждому!"/>
+            <img class="pre_gift_panel__img" src="img/b4_img.jpg" alt="Подарок каждому!"/>
         </div>
     </section>
     <section class="section gift_panel">
@@ -251,246 +241,11 @@
                 neque nihil omnis perferendis sed sequi tempore! Ad ea 
                 esse ex inventore repudiandae, suscipit!
             </p>
-            <div class="movies-grid">
-                <div class="movies-grid__card-wrapper">
-                    <div class="movies-flex__card">
-                        <img class="movies__card__img" src="img/movie/mov1.jpg"  alt="Человек-паук"/>
-                        <div class="movies__card__descr">
-                            <div class="movies__card__name">
-                                <a
-                                    href="https://www.kinopoisk.ru/film/838/"
-                                    target="_blank"
-                                    title="Кинотеатр в Иннополисе"
-                                >
-                                    Человек-паук
-                                </a>
-                            </div>
-                            <div class=movies__card__limiter></div>
-                            <div class="movies__card__about">
-                                More about selling in the Envato Marketplaces
-                            </div>
-                            <div class="movies__card__socials">
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/facebook.svg" alt="Человек-паук в facebook"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/twitter.svg"  alt="Человек-паук в twitter"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/behance.svg" alt="Человек-паук в behance"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/dribbble.svg" alt="Человек-паук в dribbble"></a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="movies-carousel">
+                <!--<div class="movies-carousel--prev"><i class="icon icon-left"></i></div>-->
+                <div id="movies_container" class="movies-flex owl-carousel">
                 </div>
-                <div></div>
-                <div class="movies-grid__card-wrapper">
-                    <div class="movies-flex__card">
-                        <img class="movies__card__img" src="img/movie/mov2.jpg" alt="Собачья жизнь 2"/>
-                        <div class="movies__card__descr">
-                            <div class="movies__card__name">
-                                <a
-                                    href="https://www.kinopoisk.ru/film/1122114/"
-                                    target="_blank"
-                                    title="Кинотеатр в Иннополисе"
-                                >
-                                    Собачья жизнь 2
-                                </a>
-                            </div>
-                            <div class=movies__card__limiter></div>
-                            <div class="movies__card__about">
-                                More about selling in the Envato Marketplaces
-                            </div>
-                            <div class="movies__card__socials">
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/facebook.svg" alt="Собачья жизнь 2 в facebook"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/twitter.svg"  alt="Собачья жизнь 2 в twitter"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/behance.svg" alt="Собачья жизнь 2 в behance"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/dribbble.svg" alt="Собачья жизнь 2 в dribbble"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movies-grid__card-wrapper">
-                    <div class="movies-flex__card">
-                        <img class="movies__card__img" src="img/movie/mov3.jpg" alt="Люди в черном: Интернэшнл"/>
-                        <div class="movies__card__descr">
-                            <div class="movies__card__name">
-                                <a
-                                    href="https://www.kinopoisk.ru/film/693730/"
-                                    target="_blank"
-                                    title="Кинотеатр в Иннополисе"
-                                >
-                                    Люди в черном: Интернэшнл
-                                </a>
-                            </div>
-                            <div class=movies__card__limiter></div>
-                            <div class="movies__card__about">
-                                More about selling in the Envato Marketplaces
-                            </div>
-                            <div class="movies__card__socials">
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/facebook.svg" alt="Люди в черном: Интернэшнл в facebook"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/twitter.svg"  alt="Люди в черном: Интернэшнл в twitter"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/behance.svg" alt="Люди в черном: Интернэшнл в behance"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/dribbble.svg" alt="Люди в черном: Интернэшнл в dribbble"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div></div>
-                <div class="movies-grid__card-wrapper">
-                    <div class="movies-flex__card">
-                        <img class="movies__card__img" src="img/movie/mov1.jpg"  alt="Человек-паук"/>
-                        <div class="movies__card__descr">
-                            <div class="movies__card__name">
-                                <a
-                                    href="https://www.kinopoisk.ru/film/838/"
-                                    target="_blank"
-                                    title="Кинотеатр в Иннополисе"
-                                >
-                                    Человек-паук
-                                </a>
-                            </div>
-                            <div class=movies__card__limiter></div>
-                            <div class="movies__card__about">
-                                More about selling in the Envato Marketplaces
-                            </div>
-                            <div class="movies__card__socials">
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/facebook.svg" alt="Человек-паук в facebook"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/twitter.svg"  alt="Человек-паук в twitter"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/behance.svg" alt="Человек-паук в behance"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/dribbble.svg" alt="Человек-паук в dribbble"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movies-grid__card-wrapper">
-                    <div class="movies-flex__card">
-                        <img class="movies__card__img" src="img/movie/mov2.jpg" alt="Собачья жизнь 2"/>
-                        <div class="movies__card__descr">
-                            <div class="movies__card__name">
-                                <a
-                                    href="https://www.kinopoisk.ru/film/1122114/"
-                                    target="_blank"
-                                    title="Кинотеатр в Иннополисе"
-                                >
-                                    Собачья жизнь 2
-                                </a>
-                            </div>
-                            <div class=movies__card__limiter></div>
-                            <div class="movies__card__about">
-                                More about selling in the Envato Marketplaces
-                            </div>
-                            <div class="movies__card__socials">
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/facebook.svg" alt="Собачья жизнь 2 в facebook"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/twitter.svg"  alt="Собачья жизнь 2 в twitter"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/behance.svg" alt="Собачья жизнь 2 в behance"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/dribbble.svg" alt="Собачья жизнь 2 в dribbble"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div></div>
-                <div class="movies-grid__card-wrapper">
-                    <div class="movies-flex__card">
-                        <img class="movies__card__img" src="img/movie/mov3.jpg" alt="Люди в черном: Интернэшнл"/>
-                        <div class="movies__card__descr">
-                            <div class="movies__card__name">
-                                <a
-                                    href="https://www.kinopoisk.ru/film/693730/"
-                                    target="_blank"
-                                    title="Кинотеатр в Иннополисе"
-                                >
-                                    Люди в черном: Интернэшнл
-                                </a>
-                            </div>
-                            <div class=movies__card__limiter></div>
-                            <div class="movies__card__about">
-                                More about selling in the Envato Marketplaces
-                            </div>
-                            <div class="movies__card__socials">
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/facebook.svg" alt="Люди в черном: Интернэшнл в facebook"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/twitter.svg"  alt="Люди в черном: Интернэшнл в twitter"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/behance.svg" alt="Люди в черном: Интернэшнл в behance"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/dribbble.svg" alt="Люди в черном: Интернэшнл в dribbble"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="movies-grid__card-wrapper">
-                    <div class="movies-flex__card">
-                        <img class="movies__card__img" src="img/movie/mov1.jpg"  alt="Человек-паук"/>
-                        <div class="movies__card__descr">
-                            <div class="movies__card__name">
-                                <a
-                                    href="https://www.kinopoisk.ru/film/838/"
-                                    target="_blank"
-                                    title="Кинотеатр в Иннополисе"
-                                >
-                                    Человек-паук
-                                </a>
-                            </div>
-                            <div class=movies__card__limiter></div>
-                            <div class="movies__card__about">
-                                More about selling in the Envato Marketplaces
-                            </div>
-                            <div class="movies__card__socials">
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/facebook.svg" alt="Человек-паук в facebook"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/twitter.svg"  alt="Человек-паук в twitter"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/behance.svg" alt="Человек-паук в behance"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/dribbble.svg" alt="Человек-паук в dribbble"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div></div>
-                <div class="movies-grid__card-wrapper">
-                    <div class="movies-flex__card">
-                        <img class="movies__card__img" src="img/movie/mov2.jpg" alt="Собачья жизнь 2"/>
-                        <div class="movies__card__descr">
-                            <div class="movies__card__name">
-                                <a
-                                    href="https://www.kinopoisk.ru/film/1122114/"
-                                    target="_blank"
-                                    title="Кинотеатр в Иннополисе"
-                                >
-                                    Собачья жизнь 2
-                                </a>
-                            </div>
-                            <div class=movies__card__limiter></div>
-                            <div class="movies__card__about">
-                                More about selling in the Envato Marketplaces
-                            </div>
-                            <div class="movies__card__socials">
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/facebook.svg" alt="Собачья жизнь 2 в facebook"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/twitter.svg"  alt="Собачья жизнь 2 в twitter"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/behance.svg" alt="Собачья жизнь 2 в behance"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/dribbble.svg" alt="Собачья жизнь 2 в dribbble"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div></div>
-                <div class="movies-grid__card-wrapper">
-                    <div class="movies-flex__card">
-                        <img class="movies__card__img" src="img/movie/mov3.jpg" alt="Люди в черном: Интернэшнл"/>
-                        <div class="movies__card__descr">
-                            <div class="movies__card__name">
-                                <a
-                                    href="https://www.kinopoisk.ru/film/693730/"
-                                    target="_blank"
-                                    title="Кинотеатр в Иннополисе"
-                                >
-                                    Люди в черном: Интернэшнл
-                                </a>
-                            </div>
-                            <div class=movies__card__limiter></div>
-                            <div class="movies__card__about">
-                                More about selling in the Envato Marketplaces
-                            </div>
-                            <div class="movies__card__socials">
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/facebook.svg" alt="Люди в черном: Интернэшнл в facebook"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/twitter.svg"  alt="Люди в черном: Интернэшнл в twitter"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/behance.svg" alt="Люди в черном: Интернэшнл в behance"></a>
-                                <a href="#" target="_blank"><img class="movies__card__social" src="img/socials/dribbble.svg" alt="Люди в черном: Интернэшнл в dribbble"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!--<div class="movies-carousel--next"><i class="icon icon-right"></i></div>-->
             </div>
         </div>
     </section> 
@@ -498,12 +253,12 @@
 
     
     <section class="section contacts">
-        <img class="contacts__map" src="img/map.png"  alt="Кинотеатр на карте"/>
+        <img class="contacts__map" src="img/map.png" alt="Кинотеатр на карте"/>
     </section>
     <footer class="footer">
         <div class="footer__socials" >
             <a class="footer__social" href="#" target="_blank"><img src="img/socials/facebook.svg" alt="Кинотеатр в facebook"></a>
-            <a class="footer__social" href="#" target="_blank"><img src="img/socials/twitter.svg"  alt="Кинотеатр в twitter"></a>
+            <a class="footer__social" href="#" target="_blank"><img src="img/socials/twitter.svg" alt="Кинотеатр в twitter"></a>
             <a class="footer__social" href="#" target="_blank"><img src="img/socials/linkedin.svg" alt="Кинотеатр в linkedin"></a>
             <a class="footer__social" href="#" target="_blank"><img src="img/socials/google-plus.svg" alt="Кинотеатр в G+"></a>
             <a class="footer__social" href="#" target="_blank"><img src="img/socials/tumblr.svg" alt="Кинотеатр в tumblr"></a>

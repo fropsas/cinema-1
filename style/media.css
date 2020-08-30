@@ -1,4 +1,6 @@
-
+html {
+    font-size: 20px;
+}
 .screen-1__header__logo {
     width: auto;
 }
@@ -78,4 +80,7 @@
 }
 .screen-1__header__nav {
     width: 50px;
+}
+.movies__card__name a {
+    font-size: 1rem;
 }
