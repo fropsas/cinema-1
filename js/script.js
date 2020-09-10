@@ -1,11 +1,3 @@
-var movies_container = {};
-
-$(document).ready(function() {
-    //initOwl();
-   // shedule.show();
-});
-
-
 const closePopupButton = document.getElementById('popup-close');
 const openPopupButton = document.getElementById('popup-open')
 const sendForm = document.getElementById('submit');

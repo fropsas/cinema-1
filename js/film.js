@@ -1,4 +1,4 @@
-var films = {
+let films = {
     kp_api_url: 'https://kinopoiskapiunofficial.tech/api/v2.1',
     kp_id_list: [
         1167867,
@@ -125,8 +125,8 @@ var films = {
         this.kp_id_list.forEach(function(item){
             let film = films.getFilmById(item);
             film.then(result => {
-                var prepareFilm = films.parseFilm(result);
-                var c_mov = {
+                let prepareFilm = films.parseFilm(result);
+                let c_mov = {
                     name: prepareFilm.name,
                     img: prepareFilm.img,
                     about: prepareFilm.description,
@@ -139,7 +139,7 @@ var films = {
                     }
                 }
                 films.list.push(c_mov);
-                var movies_flex = document.getElementById(films.target);
+                let movies_flex = document.getElementById(films.target);
                 movies_flex.innerHTML += `
                     <div class="movies-flex__card-wrapper">
                         <div class="movies-flex__card">
@@ -183,13 +183,13 @@ var films = {
         });
     },
     show: function(callback) {
-        var movies_flex = document.getElementById(films.target);
+        let movies_flex = document.getElementById(films.target);
         movies_flex.innerHTML = "";
         this.loadfilms(callback);
     }
 };
 
-var genres = [
+let genres = [
     'приключения',
     'комедия',
     'мультфильм',
@@ -200,7 +200,7 @@ var genres = [
     'мелодрама'
 ]
 
-var shedule = {
+let shedule = {
     list: [
         {
             name: 'Папаши без вредных привычек',
@@ -247,20 +247,20 @@ var shedule = {
     ],
     target: "movie-shedule",
     show: function() {
-        var movies_shedule = document.getElementById(this.target);
+        let movies_shedule = document.getElementById(this.target);
         movies_shedule.innerHTML = "";
-        for (var i = 0; i < shedule.list.length; i++) {
+        for (let i = 0; i < shedule.list.length; i++) {
             let s = shedule.list[i];
-            var c_mov = shedule.list[i];
+            let c_mov = shedule.list[i];
             
-            var h = ""
+            let h = ""
             h += 
             `
             <tr class="movie-list__table__row odd">
                 <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_time">${c_mov.time}</td>
                 <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_movieheader">${c_mov.name}</td>
                 <td class="movie-list__table__cell movie-list__table__cell_body movie-list__table__cell_body_order">`;
-            for (var j = 0; j < c_mov.genres.length; j++)    
+            for (let j = 0; j < c_mov.genres.length; j++)    
                 h += genres[c_mov.genres[j]] + ` `;
                 h += `</td>
             </tr>
