@@ -1,11 +1,19 @@
 var films = {
     kp_api_url: 'https://kinopoiskapiunofficial.tech/api/v2.1',
     kp_id_list: [
-        568413,
-        530,
-        1045172,
-        1005878,
-        535341
+        1167867,
+        1206431,
+        900052,
+        705382,
+        842037,
+        1183582,
+        972745,
+        676,
+        573869,
+        1045582,
+        1234848,
+        81733
+        
     ],
     getFilmById: function (id) {
         return new Promise(function(resolve, reject) {

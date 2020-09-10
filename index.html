@@ -11,14 +11,8 @@
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="style/media.css">
     <script src="js/jquery/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="js/owlcarousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="js/owlcarousel/css/owl.theme.default.min.css">    
-    <script src="js/owlcarousel/js/owl.carousel.js"></script>
-    <script src="js/owlcarousel/js/owl.navigation.js"></script>
-
-
+    <link rel="stylesheet" href="js/owlcarousel/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="style/cinema_owlcarousel.css">
-    <script src="js/script.js"></script>
-    <script src="js/film.js"></script>
 </head>
 <body>
     <!--Первый экран-->
@@ -224,7 +218,7 @@
                 That means if you do not cross to the next elite level
                 before the next event, you cannot claim your prizes.
             </p>
-            <button class="gift_panel__get">
+            <button href="#" id="popup-open" class="gift_panel__get" >
                 Получить подарок
             </button>
         </div>
@@ -269,7 +263,7 @@
         </div>
     </footer>
 
-    <!--Шестой экран
+    <!--Шестой экран 
     <form id="orderticket" action="order.php" method="POST" enctype="multipart/form-data">
         <h3>Заказ билетов</h3>
         <div>
@@ -321,6 +315,38 @@
         </div> 
             
     </form>    
-    Конец шестого экрана-->   
+   Конец шестого экрана  --> 
+    <div id="popup" class="popup hidden">
+        <form class="order-form" action="?act=ticket">
+            <div id="popup-close" class="close"><i class="icon icon-cross" title="cross"></i></div>
+            <div class="modal__form">
+                <div class="input-wrap">
+                      <input type="text" id="name" placeholder="Имя*" name="name" class="input-text">
+                      <div class="popup-error-messager"></div>
+                </div> 
+                <div class="input-wrap">
+                    <select id="place" name="place" required="required" class="input-text input-select">  
+                        <option value="1">Выбор1</option>
+                        <option value="2">Выбор2</option>
+                        <option value="3">Выбор3</option>
+                    </select>
+                    <div class="popup-error-messager"></div>
+                </div>
+                <div class="input-wrap">
+                    <input type="checkbox" id="agree" name="agree" class="input-checkbox" required="required">
+                    <label for="agree"><i class="icon icon-check" title="check"></i> Я согласен на обработку персональных данных</label> 
+                    <div class="popup-error-messager"></div>
+                </div>
+                <div class="input-wrap" >
+                    <button class="button1" type="submit" id="submit">Отправить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/owlcarousel/js/owl.carousel.js"></script>
+    <script src="js/owlcarousel/js/owl.navigation.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/film_mock.js"></script>
 </body>
 </html>
