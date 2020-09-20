@@ -255,17 +255,15 @@ for (let i = 0; i < filmsHire.length; i++) {
 let mosaicDOM = document.getElementById("movies_container");
 for (let i = 0; i < filmsNew.length; i++) {
     let currentFilm = filmsNew[i],
-        filmBlockHTML = film.renderFilmBlock.bind(currentFilm)(),
-        div = document.createElement("div");
-
-
+    filmBlockHTML = film.renderFilmBlock.bind(currentFilm)(),
+    div = document.createElement("div");
     div.classList.add("movies-flex__card-wrapper");
     div.innerHTML = filmBlockHTML;
     mosaicDOM.appendChild(div);
 
 }
     
-    movies_container = $("#movies_container").owlCarousel({
-        nav: true,
-        navText: ["<i class='icon icon-left'></i>","<i class='icon icon-right'></i>"]
-    });
+let owlmovies_container = $("#movies_container").owlCarousel({
+    nav: true,
+    navText: ["<i class='icon icon-left'></i>","<i class='icon icon-right'></i>"]
+});

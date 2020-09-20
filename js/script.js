@@ -14,7 +14,6 @@ openPopupButton.onclick = function(event){
     popup.classList.remove('hidden');
 }
 sendForm.onclick = function(event){
-    event.preventDefault();
 
     let name = document.getElementById('name');   
     let nameParent = name.parentNode;
@@ -23,6 +22,7 @@ sendForm.onclick = function(event){
     if(!checkInput(name.value)){        
         nameParent.classList.add('error')
         nameParent.getElementsByClassName('popup-error-messager')[0].innerHTML='Заполните поле Имя';
+        event.preventDefault();
     }
     
 
@@ -33,6 +33,7 @@ sendForm.onclick = function(event){
     if(!checkInput(place.value)){        
         placeParent.classList.add('error')
         placeParent.getElementsByClassName('popup-error-messager')[0].innerHTML='Выберите место';
+        event.preventDefault();
     }
 
 
@@ -43,6 +44,7 @@ sendForm.onclick = function(event){
     if(!checkInput(agree.checked)){        
         agreeParent.classList.add('error')
         agreeParent.getElementsByClassName('popup-error-messager')[0].innerHTML='Согласитесь на передачу данных';
+        event.preventDefault();
     }
     return true;
 }
