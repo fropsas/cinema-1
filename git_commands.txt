@@ -1,0 +1,5 @@
+git add .
+git commit -m "ТЗ19 - mock, форма"
+git remote set-url origin https://github.com/violettado/cinema.git 
+
+git push origin master   
